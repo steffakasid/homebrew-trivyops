@@ -9,17 +9,17 @@ class Trivyops < Formula
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/trivyops/releases/download/v0.10-dev/trivyops_0.10-dev_Darwin_x86_64.tar.gz"
-      sha256 "b865e330a06d940d10de0d176163698698de23b98751f2329ec0172ccb3ebe3b"
+    if Hardware::CPU.arm?
+      url "https://github.com/steffakasid/trivyops/releases/download/v0.10-dev/trivyops_0.10-dev_Darwin_arm64.tar.gz"
+      sha256 "ca893005467797326f15d43c09d89fb5032ece3237856e94d31c0af376617f72"
 
       def install
         bin.install "trivyops"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/trivyops/releases/download/v0.10-dev/trivyops_0.10-dev_Darwin_arm64.tar.gz"
-      sha256 "d9a5fd6496f1f441f954147f52c4abd40a145436b536605604f6613d43a48468"
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/trivyops/releases/download/v0.10-dev/trivyops_0.10-dev_Darwin_x86_64.tar.gz"
+      sha256 "a425b5c924c3a108a953b316a0ef46740024abbb0d1d73bab9549c23c629f6f4"
 
       def install
         bin.install "trivyops"
@@ -30,7 +30,7 @@ class Trivyops < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/steffakasid/trivyops/releases/download/v0.10-dev/trivyops_0.10-dev_Linux_arm64.tar.gz"
-      sha256 "d53fac8229430f1539e9ddc5c2a65b606b96aba1c82838aaf3d642346ad1accc"
+      sha256 "1af4988d411ffd7a05e6f2c5b14b901ec7e05c0cc1d30166fb939d08fe7560a4"
 
       def install
         bin.install "trivyops"
@@ -38,7 +38,7 @@ class Trivyops < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/steffakasid/trivyops/releases/download/v0.10-dev/trivyops_0.10-dev_Linux_x86_64.tar.gz"
-      sha256 "b8a95d6d5b4c2715b8efc45ea3b784ce3622665ed85ca9af86adbb4ec0eb8358"
+      sha256 "ce2e4b11d8128f945fff227c54ad2d63efeea0e3bd67c2d364bfbef2dccdbd1a"
 
       def install
         bin.install "trivyops"
