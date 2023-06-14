@@ -5,21 +5,21 @@
 class Trivyops < Formula
   desc "This tool can be used to scan GitLab for trivy results"
   homepage "https://github.com/steffakasid/trivyops"
-  version "0.16"
+  version "0.17"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/trivyops/releases/download/0.16/trivyops_0.16_Darwin_x86_64.tar.gz"
-      sha256 "810e0880ca5bbcf0f063e90600a7d2c6fae9311c0342ec4fb5ab934ad12795d4"
+    if Hardware::CPU.arm?
+      url "https://github.com/steffakasid/trivyops/releases/download/v0.17/trivyops_0.17_Darwin_arm64.tar.gz"
+      sha256 "8c32d055ca3cb10a5c761e7e0cc5062f46c1ede9b80da2831773c929c9f97fe8"
 
       def install
         bin.install "trivyops"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/trivyops/releases/download/0.16/trivyops_0.16_Darwin_arm64.tar.gz"
-      sha256 "b6076934fb28e6954e9a14e030c57999040f6d55e297c1c658dd9a255c8b4767"
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/trivyops/releases/download/v0.17/trivyops_0.17_Darwin_x86_64.tar.gz"
+      sha256 "3c754af763388e8dee59e18bfb637c0b2a44dcf34edb12c618a8ad76786b2a0c"
 
       def install
         bin.install "trivyops"
@@ -28,17 +28,17 @@ class Trivyops < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/trivyops/releases/download/0.16/trivyops_0.16_Linux_x86_64.tar.gz"
-      sha256 "dd02a30819666347e7eb08e1adfa19661af700792412bfaceb1f247a94b9e768"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/steffakasid/trivyops/releases/download/v0.17/trivyops_0.17_Linux_arm64.tar.gz"
+      sha256 "f9d3aed9a4beb670186226501ccfe20c77fb22b8aa36533f99476813ac0892cc"
 
       def install
         bin.install "trivyops"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/trivyops/releases/download/0.16/trivyops_0.16_Linux_arm64.tar.gz"
-      sha256 "ee70bfc5fd188fb34f3400c3154a0ef01b321c9c4f3d21172527e7fa69860791"
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/trivyops/releases/download/v0.17/trivyops_0.17_Linux_x86_64.tar.gz"
+      sha256 "c61eba510dcf8d2e7a9ea815e87b037c8173752c36c26227d7f410bf6e50a166"
 
       def install
         bin.install "trivyops"
