@@ -5,21 +5,21 @@
 class Trivyops < Formula
   desc "This tool can be used to scan GitLab for trivy results"
   homepage "https://github.com/steffakasid/trivyops"
-  version "0.27"
+  version "0.28"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/steffakasid/trivyops/releases/download/v0.27/trivyops_0.27_darwin_amd64.tar.gz"
-      sha256 "f27951ca73da5e13230ef952d604ca271585a72e4ec6edc110d5b72a6a4f5af0"
+      url "https://github.com/steffakasid/trivyops/releases/download/v0.28/trivyops_0.28_darwin_amd64.tar.gz"
+      sha256 "1aec6bbc94961d79dffcd414c60afa75d0335c62ccf0057cad47c0ef97d70101"
 
       def install
         bin.install "trivyops"
       end
     end
     on_arm do
-      url "https://github.com/steffakasid/trivyops/releases/download/v0.27/trivyops_0.27_darwin_arm64.tar.gz"
-      sha256 "386031c1333c647db2215240fbcdf0a9f26b808d0117127cfafcb3aa503b4366"
+      url "https://github.com/steffakasid/trivyops/releases/download/v0.28/trivyops_0.28_darwin_arm64.tar.gz"
+      sha256 "15fb9eb97fb8889de9ef2b20666ab363fdeafac4bde2e810b4103f35d35b9747"
 
       def install
         bin.install "trivyops"
@@ -30,8 +30,8 @@ class Trivyops < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/steffakasid/trivyops/releases/download/v0.27/trivyops_0.27_linux_amd64.tar.gz"
-        sha256 "da5b909633783def2ff27caab5b7311f09654987ec8952b0b89b3d76fb27030a"
+        url "https://github.com/steffakasid/trivyops/releases/download/v0.28/trivyops_0.28_linux_amd64.tar.gz"
+        sha256 "51d7c0aba0b6cc84d7df671e95e7a65aa83ab6e4898f1fd2763d07a2ca7cba7b"
 
         def install
           bin.install "trivyops"
@@ -40,8 +40,8 @@ class Trivyops < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/steffakasid/trivyops/releases/download/v0.27/trivyops_0.27_linux_arm64.tar.gz"
-        sha256 "76ced414072cd43a85c921b6e2c4c67b2cd28b86710d5f962a792300451a1797"
+        url "https://github.com/steffakasid/trivyops/releases/download/v0.28/trivyops_0.28_linux_arm64.tar.gz"
+        sha256 "c1e44684e8bdf4d5b964c2f93dd192bd73814d7a1359cfed2cfb6885d64267b2"
 
         def install
           bin.install "trivyops"
