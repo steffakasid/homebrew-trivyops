@@ -1,11 +1,13 @@
-# Steffakasid Trivyops
+# DEPRECATED: steffakasid/homebrew-trivyops
 
-## How do I install these formulae?
+This tap is deprecated.
 
-`brew install steffakasid/trivyops/<formula>`
+Use the consolidated tap instead:
 
-Or `brew tap steffakasid/trivyops` and then `brew install <formula>`.
+```bash
+brew tap steffakasid/tap
+brew install steffakasid/tap/trivyops
+```
 
-## Documentation
-
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+For full installation instructions, see the consolidated tap README:
+https://github.com/steffakasid/homebrew-tap
