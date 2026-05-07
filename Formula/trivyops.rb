@@ -7,6 +7,7 @@ class Trivyops < Formula
   homepage "https://github.com/steffakasid/trivyops"
   version "1.1.4"
   license "Apache-2.0"
+  deprecate! date: "2026-05-07", because: "use steffakasid/tap/trivyops instead"
 
   on_macos do
     on_intel do
